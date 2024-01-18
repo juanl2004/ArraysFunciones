@@ -10,6 +10,7 @@ public class Ejercicio5 {
 	
 	public static int[] buscarTodos(int t[], int valor) {
 		
+
 	}
 
 }

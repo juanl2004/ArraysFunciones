@@ -1,35 +1,44 @@
 package arraysfunciones;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ejercicio3 {
 
-	public static void main(String[] args) {
-
-		int resultado[] = Ejercicio3.rellenaPares(20, 100);
-
-		for (int numero : resultado) {
-			System.out.println(numero);
-		}
+	public static void main(String[] args) { 
+				
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Introduce la longitud de la tabla --> ");
+		int longitud = sc.nextInt();
+		
+		int[] lista = new int[longitud];
+		
+		System.out.print("Introduce el valor hasta donde generar números --> ");
+		int fin = sc.nextInt();
+		
+		System.out.println(Arrays.toString(Ejercicio3.rellenaPares(longitud, fin)));
+	
+		sc.close();
 	}
+	
 
 	public static int[] rellenaPares(int longitud, int fin) {
-		
-		longitud = 0;
-		fin = 0;
-		
-		int[] rellenaPares = new int[longitud];
 
-		int aleatorio;
+		int[] j = new int[longitud];
 
-		for (int i = 0; i <= rellenaPares.length; i++) {
+		for (int i = 0; i <= j.length; i++) {
 
-			aleatorio = 2 + (int) (Math.random() * (fin - 2 + 1));
+			j[i] = (int) (Math.random() * (fin - 2) + 2);
 
-			rellenaPares[i] = aleatorio;
+			while (j[i] % 2 != 0) {
+				j[i] = (int) (Math.random() * (fin - 2) + 2);
+			}
+
 		}
 
-		return rellenaPares;
+		return j;
+	
 	}
 
 }
