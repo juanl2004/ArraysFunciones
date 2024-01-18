@@ -26,12 +26,11 @@ public class Ejercicio6 {
 
 		
 		
-		for (int i = 0; i <= sumaTotal.length; i++) {
+		for (int i = 0; i < sumaTotal.length; i++) {
 		
 			for (int j = 0; i <= t.length; i++) {
 				 
 			}
-			System.out.println(Arrays.toString(sumaTotal));
 		}
 		
 		return sumaTotal;

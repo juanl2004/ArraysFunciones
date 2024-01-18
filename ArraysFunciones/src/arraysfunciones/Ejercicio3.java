@@ -27,12 +27,12 @@ public class Ejercicio3 {
 
 		int[] j = new int[longitud];
 
-		for (int i = 0; i <= j.length; i++) {
+		for (int i = 0; i < j.length; i++) {
 
 			j[i] = (int) (Math.random() * (fin - 2) + 2);
 
 			while (j[i] % 2 != 0) {
-				j[i] = (int) (Math.random() * (fin - 2) + 2);
+				j[i] = (int) (Math.random() * (fin - 1) + 2);
 			}
 
 		}
